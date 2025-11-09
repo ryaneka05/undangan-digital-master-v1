@@ -167,7 +167,7 @@ const Layout = ({ children }: LayoutProps) => {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     onClick={toggleMusic}
-                    className="fixed top-4 right-4 z-50 bg-white/80 backdrop-blur-sm p-3 rounded-full shadow-lg border border-rose-100/50"
+                    className="fixed bottom-30 right-4 z-50 bg-white/80 backdrop-blur-sm p-3 rounded-full shadow-lg border border-rose-100/50"
                 >
                     {isPlaying ? (
                         <div className="relative">
@@ -179,9 +179,37 @@ const Layout = ({ children }: LayoutProps) => {
                     )}
                 </motion.button>
 
-                <main className="relative h-full w-full pb-[100px]">
-                    {children}
-                </main>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="min-h-screen relative overflow-hidden "
+                >
+                    {/* Background */}
+                    <div className="relative flex flex-col items-center justify-center min-h-screen w-full bg-[#022545] bg-cover overflow-hidden">
+                        {/* Main Content with Decorative Background */}
+                        <div className="relative z-10 text-white min-h-screen flex flex-col items-center bg-[url('/assets/images/bg-blue.jpg')] bg-cover bg-center bg-no-repeat w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl px-0 sm:px-4">
+
+                            {/* Bunga Kiri Atas */}
+                            <img
+                                src="/assets/images/frame-tl.png"
+                                alt="Bunga kiri atas"
+                                className="absolute top-0 left-0 w-50 h-40 md:w-50 md:h-40 lg:w-50 lg:h-40 opacity-90 pointer-events-none select-none"
+                            />
+
+                            {/* Bunga Kanan Bawah */}
+                            <img
+                                src="/assets/images/frame-br.png"
+                                alt="Bunga kanan bawah"
+                                className="absolute bottom-0 right-0 w-50 h-40 md:w-50 md:h-40 lg:w-50 opacity-90 pointer-events-none select-none"
+                            />
+                            <main className="relative h-full w-full">
+                                {children}
+                            </main>
+                        </div>
+                    </div>
+                </motion.div>
+
                 <BottomBar />
                 {/* Music Info Toast */}
                 <AnimatePresence>
