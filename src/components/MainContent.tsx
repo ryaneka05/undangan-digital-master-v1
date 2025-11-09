@@ -7,6 +7,9 @@ import Gifts from '@/components/Gifts';
 
 export default function MainContent() {
     return (
-        <Home/>
+        <>
+            <Home />
+            <Hero />
+        </>
     )
 }

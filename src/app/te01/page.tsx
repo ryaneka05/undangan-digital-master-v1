@@ -1,8 +1,8 @@
 "use client";
 
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
-import { useSearchParams, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import LandingPage from "@/components/LandingPage";
 import Layout from "@/components/Layout";
 import MainContent from '@/components/MainContent';

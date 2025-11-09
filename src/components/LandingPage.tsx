@@ -3,6 +3,7 @@ import config from '@/config/config';
 import { motion } from 'framer-motion';
 import { useSearchParams } from 'next/navigation';
 import { Playfair_Display } from "next/font/google";
+import FlowerFrame from "@/components/FlowerFrame"
 
 const playfair = Playfair_Display({
     variable: "--font-playfair-display",
@@ -27,22 +28,11 @@ const LandingPage = ({ onOpenInvitation }: { onOpenInvitation: () => void }) => 
                 {/* Main Content with Decorative Background */}
                 <div className="relative z-10 text-white min-h-screen flex flex-col items-center bg-[url('/assets/images/bg-blue.jpg')] bg-cover bg-center bg-no-repeat w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl px-0 sm:px-4">
 
-                    {/* Bunga Kiri Atas */}
-                    <img
-                        src="/assets/images/frame-tl.png"
-                        alt="Bunga kiri atas"
-                        className="absolute top-0 left-0 w-50 h-40 md:w-50 md:h-40 lg:w-50 lg:h-40 opacity-90 pointer-events-none select-none"
-                    />
-
-                    {/* Bunga Kanan Bawah */}
-                    <img
-                        src="/assets/images/frame-br.png"
-                        alt="Bunga kanan bawah"
-                        className="absolute bottom-0 right-0 w-50 h-40 md:w-50 md:h-40 lg:w-50 opacity-90 pointer-events-none select-none"
-                    />
+                    {/* Decorative Flower */}
+                    <FlowerFrame />
 
                     {/* Space */}
-                    <div className="flex flex-col gap-4 mb-30 sm:mb-30 items-center"></div>
+                    <div className="flex flex-col gap-4 mb-40 sm:mb-35 items-center"></div>
 
                     <motion.div
                         initial={{ y: 20, opacity: 0 }}

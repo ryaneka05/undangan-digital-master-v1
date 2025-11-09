@@ -171,11 +171,11 @@ const Layout = ({ children }: LayoutProps) => {
                 >
                     {isPlaying ? (
                         <div className="relative">
-                            <PauseCircle className="w-6 h-6 text-rose-500" />
+                            <PauseCircle className="w-6 h-6 text-[#e2a234]" />
                             <span className="absolute -top-1 -right-1 w-2 h-2 bg-green-500 rounded-full animate-pulse" />
                         </div>
                     ) : (
-                        <PlayCircle className="w-6 h-6 text-rose-500" />
+                        <PlayCircle className="w-6 h-6 text-[#e2a234]" />
                     )}
                 </motion.button>
 
@@ -189,20 +189,6 @@ const Layout = ({ children }: LayoutProps) => {
                     <div className="relative flex flex-col items-center justify-center min-h-screen w-full bg-[#022545] bg-cover overflow-hidden">
                         {/* Main Content with Decorative Background */}
                         <div className="relative z-10 text-white min-h-screen flex flex-col items-center bg-[url('/assets/images/bg-blue.jpg')] bg-cover bg-center bg-no-repeat w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl px-0 sm:px-4">
-
-                            {/* Bunga Kiri Atas */}
-                            <img
-                                src="/assets/images/frame-tl.png"
-                                alt="Bunga kiri atas"
-                                className="absolute top-0 left-0 w-50 h-40 md:w-50 md:h-40 lg:w-50 lg:h-40 opacity-90 pointer-events-none select-none"
-                            />
-
-                            {/* Bunga Kanan Bawah */}
-                            <img
-                                src="/assets/images/frame-br.png"
-                                alt="Bunga kanan bawah"
-                                className="absolute bottom-0 right-0 w-50 h-40 md:w-50 md:h-40 lg:w-50 opacity-90 pointer-events-none select-none"
-                            />
                             <main className="relative h-full w-full">
                                 {children}
                             </main>

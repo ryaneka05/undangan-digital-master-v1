@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import config from '@/config/config';
 import { Playfair_Display } from "next/font/google";
+import FlowerFrame from "@/components/FlowerFrame"
 
 const playfair = Playfair_Display({
     variable: "--font-playfair-display",
@@ -18,9 +19,12 @@ export default function Home() {
         >
             <div className="relative flex flex-col items-center justify-center min-h-screen w-full">
                 <div className="relative z-10 text-white min-h-screen flex flex-col items-center w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl px-0 sm:px-4">
+                    
+                    {/* Decorative Flower */}
+                    <FlowerFrame/>
 
                     {/* Space */}
-                    <div className="flex flex-col gap-4 mb-60 sm:mb-60 items-center"></div>
+                    <div className="flex flex-col gap-4 mb-40 sm:mb-35 items-center"></div>
 
                     <motion.div
                         initial={{ y: 20, opacity: 0 }}
@@ -69,6 +73,20 @@ export default function Home() {
                         <div className="inline-flex flex-col items-center space-y-1 px-4 sm:px-6 py-2 sm:py-3">
                             <p className="text-center tracking-wide font-serif text-lg sm:text-sm md:text-lg">
                                 {config.data.date}
+                            </p>
+                        </div>
+                    </motion.div>
+
+                    {/* Thanks */}
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.9 }}
+                        className="flex flex-col gap-4 mb-6 sm:mb-8 items-center"
+                    >
+                        <div className="inline-flex flex-col items-center space-y-1 px-4 sm:px-6 py-2 sm:py-3">
+                            <p className="text-center font-serif">
+                                Terimakasih telah menjadi bagian di hari istimewa kami
                             </p>
                         </div>
                     </motion.div>
