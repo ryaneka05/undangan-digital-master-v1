@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, ReactNode, Children } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Music, PauseCircle, PlayCircle } from 'lucide-react';
 import config from '@/config/config';
-import BottomBar from '@/components/BottomBar';
+import BottomBar from '@/components/layout/BottomBar';
 
 interface LayoutProps {
     children: ReactNode;

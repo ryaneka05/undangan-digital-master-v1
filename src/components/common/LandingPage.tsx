@@ -3,7 +3,7 @@ import config from '@/config/config';
 import { motion } from 'framer-motion';
 import { useSearchParams } from 'next/navigation';
 import { Playfair_Display } from "next/font/google";
-import FlowerFrame from "@/components/FlowerFrame"
+import FlowerFrame from "@/components/common/FlowerFrame"
 
 const playfair = Playfair_Display({
     variable: "--font-playfair-display",
@@ -63,9 +63,9 @@ const LandingPage = ({ onOpenInvitation }: { onOpenInvitation: () => void }) => 
                         >
                             <div className="space-y-1 py-2 sm:py-3">
                                 <h1 className={`${playfair.className} tracking-wide text-5xl md:text-6xl sm:text-4xl leading-tight`}>
-                                    {config.data.groomName}
+                                    {config.data.groomNicknameName}
                                     <span className="mx-2 sm:mx-3">&</span>
-                                    {config.data.brideName}
+                                    {config.data.brideNicknameName}
                                 </h1>
                             </div>
                         </motion.div>

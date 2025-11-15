@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import FlowerFrame from "@/components/FlowerFrame"
+import FlowerFrame from "@/components/common/FlowerFrame"
 
 export default function OpeningVerse() {
     return (

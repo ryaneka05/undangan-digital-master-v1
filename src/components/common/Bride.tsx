@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import FlowerFrame from "@/components/FlowerFrame"
+import FlowerFrame from "@/components/common/FlowerFrame"
 import config from '@/config/config';
 import Image from 'next/image';
 import { Playfair_Display } from "next/font/google";
@@ -112,7 +112,7 @@ export default function Bride() {
                     >
                         <div className="space-y-1 py-2 sm:py-3">
                             <h1 className={`${meaCulpa.className} tracking-wide text-3xl md:text-4xl sm:text-2xl leading-tight`}>
-                                {config.data.brideName}
+                                {config.data.brideNicknameName}
                             </h1>
                         </div>
                     </motion.div>
@@ -126,7 +126,7 @@ export default function Bride() {
                     >
                         <div className="space-y-1 py-2 sm:py-3">
                             <h2 className="text-center font-serif tracking-wide text-3xl md:text-4xl sm:text-2xl leading-tight text-[#e2a234]">
-                                Milea Pratiwi
+                                {config.data.brideFullNameName}
                             </h2>
                         </div>
                     </motion.div>
@@ -140,7 +140,7 @@ export default function Bride() {
                     >
                         <div className="inline-flex flex-col items-center space-y-1 px-20 sm:px-20 py-0 sm:py-0">
                             <p className="text-center font-serif text-sm sm:text-sm md:text-sm">
-                                Putri Pertama dari Bapak Lorem Dan Ibu Ipsum
+                                {config.data.parentBrideDescription}
                             </p>
                         </div>
                     </motion.div>
@@ -200,12 +200,12 @@ export default function Bride() {
                     >
                         <div className="space-y-1 py-2 sm:py-3">
                             <h1 className={`${meaCulpa.className} tracking-wide text-3xl md:text-4xl sm:text-2xl leading-tight`}>
-                                {config.data.groomName}
+                                {config.data.groomNicknameName}
                             </h1>
                         </div>
                     </motion.div>
 
-                    {/* Bride FullName */}
+                    {/* Groom FullName */}
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -214,12 +214,12 @@ export default function Bride() {
                     >
                         <div className="space-y-1 py-2 sm:py-3">
                             <h2 className="text-center font-serif tracking-wide text-3xl md:text-4xl sm:text-2xl leading-tight text-[#e2a234]">
-                                Dilan Pratama
+                                {config.data.groomFullNameName}
                             </h2>
                         </div>
                     </motion.div>
 
-                    {/* Parent Bride */}
+                    {/* Groom Bride */}
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -228,7 +228,7 @@ export default function Bride() {
                     >
                         <div className="inline-flex flex-col items-center space-y-1 px-20 sm:px-20 py-0 sm:py-0">
                             <p className="text-center font-serif text-sm sm:text-sm md:text-sm">
-                                Putri Pertama dari Bapak Lorem Dan Ibu Ipsum
+                                {config.data.parentGroomDescription}
                             </p>
                         </div>
                     </motion.div>

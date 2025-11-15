@@ -3,10 +3,14 @@ const config = {
         title: "Pernikahan Fulan & Fulana", // Nanti ini otomatis
         description:
             "Kami akan menikah dan mengundang Anda untuk turut merayakan momen istimewa ini.", // Nanti ini dibikin random
-        groomName: "Dilan",
-        brideName: "Millea",
+        groomNicknameName: "Dilan",
+        brideNicknameName: "Millea",
+        groomFullNameName: "Dilan Pratama",
+        brideFullNameName: "Milea Pratiwi",        
         parentGroom: "Bapak Groom & Ibu Groom",
+        parentGroomDescription: "Putri Pertama dari Bapak Groom Dan Ibu Groom",
         parentBride: "Bapak Bride & Ibu Bride",
+        parentBrideDescription: "Putri Pertama dari Bapak Bride Dan Ibu Bride",
         date: "11 November 2025",
         maps_url: "https://goo.gl/maps/abcdef",
         maps_embed:
@@ -24,6 +28,7 @@ const config = {
                 endTime: "17:30",
                 location: "Grand Ballroom, Hotel Majesty",
                 address: "Jl. Jend. Sudirman No.1, Jakarta",
+                icImage: "/assets/icons/ic-building.png",
             },
             {
                 title: "Resepsi Nikah",
@@ -32,6 +37,7 @@ const config = {
                 endTime: "17:30",
                 location: "Grand Ballroom, Hotel Majesty",
                 address: "Jl. Jend. Sudirman No.1, Jakarta",
+                icImage: "/assets/icons/ic-building.png",
             }
         ],
         audio: {

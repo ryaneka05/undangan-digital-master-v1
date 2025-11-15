@@ -1,5 +1,5 @@
-import OpeningVerse from "@/components/OpeningVerse";
-import Bride from "@/components/Bride";
+import OpeningVerse from "@/components/common/OpeningVerse";
+import Bride from "@/components/common/Bride";
 
 export default function Hero() {
     return (
