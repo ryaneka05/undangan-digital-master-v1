@@ -5,6 +5,7 @@ import SaveTheDate from "@/components/common/SaveTheDate";
 export default function Hero() {
     return (
         <>
+            <SaveTheDate />
             <OpeningVerse />
             <Bride />
         </>

@@ -11,6 +11,7 @@ const config = {
         parentGroomDescription: "Putri Pertama dari Bapak Groom Dan Ibu Groom",
         parentBride: "Bapak Bride & Ibu Bride",
         parentBrideDescription: "Putri Pertama dari Bapak Bride Dan Ibu Bride",
+        dateTime: "2025-11-16 08:00:00",
         date: "11 November 2025",
         maps_url: "https://goo.gl/maps/abcdef",
         maps_embed:
