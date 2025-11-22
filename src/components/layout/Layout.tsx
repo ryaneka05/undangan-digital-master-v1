@@ -153,9 +153,9 @@ const Layout = ({ children }: LayoutProps) => {
     }, []);
 
     return (
-        <div className="relative min-h-screen w-full from-gray-50 to-gray-100 flex items-center justify-center">
+        <div className="relative min-h-screen w-full bg-[#022545] bg-cover flex items-center justify-center">
             <motion.div
-                className="mx-auto w-full max-w-[430px] min-h-screen bg-white relative overflow-hidden border border-gray-200 shadow-lg"
+                className="mx-auto w-full max-w-[430px] min-h-screen bg-white relative overflow-hidden border shadow-lg"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
