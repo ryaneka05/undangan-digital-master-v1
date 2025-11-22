@@ -24,14 +24,49 @@ interface CardProps {
 export default function GiftAddress({ recipientName, address, waNo }: CardProps) {
     const [copied, setCopied] = useState(false);
     const textCopy = address;
+    
     const handleCopy = () => {
-        navigator.clipboard.writeText(textCopy);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 1500);
+        if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(textCopy)
+                .then(() => {
+                    setCopied(true);
+                    setTimeout(() => setCopied(false), 1500);
+                })
+                .catch(err => {
+                    console.error("Clipboard error:", err);
+                    fallbackCopy(textCopy);
+                });
+        } else {
+            fallbackCopy(textCopy);
+        }
+    };
+
+    const fallbackCopy = (text: string) => {
+        const textarea = document.createElement("textarea");
+        textarea.value = text;
+        textarea.style.position = "fixed";
+        textarea.style.opacity = "0";
+        textarea.style.left = "-9999px";
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+
+        try {
+            const success = document.execCommand("copy");
+            if (success) {
+                setCopied(true);
+                setTimeout(() => setCopied(false), 1500);
+            } else {
+                alert("Gagal menyalin text.");
+            }
+        } catch (err) {
+            console.error("Fallback copy error:", err);
+        }
+        document.body.removeChild(textarea);
     };
 
     return (
-        <div className="bg-white/50 backdrop-blur-xs shadow-md rounded-2xl overflow-hidden p-2 w-95 h-fit mb-5">
+        <div className="bg-white/50 backdrop-blur-xs shadow-md rounded-2xl overflow-hidden p-2 w-85 sm:w-85 md:w-95 h-fit mb-5">
             <div className="flex flex-col gap-2">
                 <div className="flex flex-row">
                     <div className="flex flex-col justify-center items-center w-full">
@@ -81,7 +116,7 @@ export default function GiftAddress({ recipientName, address, waNo }: CardProps)
                                         alt="ic-wa"
                                         className="w-4 h-4"
                                     />
-                                    <span className="text-center font-serif text-sm">
+                                    <span className="text-center font-serif text-xs md:text-sm sm:text-xs">
                                         Konfirmasi WhatsApp
                                     </span>
                                 </span>

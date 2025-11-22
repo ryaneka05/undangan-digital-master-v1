@@ -36,14 +36,16 @@ export default function Gifts() {
                             alt="gift"
                             className="w-20 h-20 mb-5 sm:mb-5"
                         ></img>
-
+                        
                         <h1 className={`${playfair.className} tracking-wide text-2xl md:text-3xl sm:text-xl leading-tight mb-5 sm:mb-5`}>
                             Wedding Gift
                         </h1>
 
-                        <p className="text-center font-serif text-sm sm:text-sm md:text-sm mb-10 sm:mb-10">
-                            Tanpa mengurangi rasa hormat, bagi Bapak/Ibu/Saudara/i yang ingin memberikan tanda kasih untuk kami, dapat melalui:
-                        </p>
+                        <div className="inline-flex flex-col items-center space-y-1 px-4 sm:px-6 py-0 sm:py-0">
+                            <p className="text-center font-serif text-sm sm:text-sm md:text-sm mb-10 sm:mb-10">
+                                Tanpa mengurangi rasa hormat, bagi Bapak/Ibu/Saudara/i yang ingin memberikan tanda kasih untuk kami, dapat melalui:
+                            </p>
+                        </div>
 
                         {config.data.banks.map((item, idx) => (
                             <AccountCard
