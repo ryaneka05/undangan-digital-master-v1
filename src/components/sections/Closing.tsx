@@ -72,12 +72,20 @@ export default function Closing() {
                         {/* Sosial Media*/}
                         <div className="relative z-10 text-white flex flex-col items-center w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl px-0 sm:px-4 mb-2 sm:mb-2">
                             <div className="inline-flex items-center">
-                                <div className="flex">
-                                    <img src="/assets/icons/ic-whatsapp.png"
-                                        alt="icon"
-                                        className="w-5 h-5">
-                                    </img>
-                                </div>
+
+                                {/* WhatsApp */}
+                                <a
+                                    href="https://wa.me/6281234567890"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition"
+                                >
+                                    <img
+                                        src="/assets/icons/sosmed/ic-whatsapp.png"
+                                        alt="whatsapp"
+                                        className="w-5 h-5"
+                                    />
+                                </a>
                             </div>
                         </div>
 
@@ -88,7 +96,7 @@ export default function Closing() {
                                     Music:
                                 </p>
                                 <p className="text-center font-serif text-xs sm:text-xs md:text-xs">
-                                    Surah Ar rum ayat 21 - Muzammil Hasballah
+                                    {config.data.audio.title}
                                 </p>
                             </div>
                         </div>

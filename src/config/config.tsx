@@ -50,14 +50,16 @@ const config = {
         },
         banks: [
             {
-                bank: "Bank Central Asia",
+                bank: "BRI",
                 accountNumber: "1234567890",
                 accountName: "FULAN",
+                waConfirm: "081234567890",
             },
             {
-                bank: "Bank Mandiri",
+                bank: "BRI",
                 accountNumber: "0987654321",
                 accountName: "FULANA",
+                waConfirm: "081234567890",
             }
         ]
     }

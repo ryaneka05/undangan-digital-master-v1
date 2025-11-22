@@ -59,7 +59,7 @@ export default function SaveTheDate() {
                         className="flex flex-col gap-4 mb-5 sm:mb-5 items-center"
                     >
                         <div className="inline-flex flex-col items-center space-y-1 px-4 sm:px-6 py-0 sm:py-0">
-                            <p className="text-center tracking-[0.1em] font-serif text-lg sm:text-lg md:text-lg">
+                            <p className="text-center tracking-\[\0.1\em] font-serif text-lg sm:text-lg md:text-lg">
                                 Save The Date
                             </p>
                         </div>
@@ -87,7 +87,7 @@ export default function SaveTheDate() {
                         className="flex flex-col gap-4 mb-5 sm:mb-5 items-center"
                     >
                         <div className="inline-flex flex-col items-center space-y-1 px-4 sm:px-6 py-0 sm:py-0">
-                            <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-full border-[0px] border-white shadow-lg">
+                            <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-full border-\[0px\] border-white shadow-lg">
                                 <motion.div
                                     className="w-full h-full"
                                 >

@@ -12,6 +12,7 @@ export default function MainContent() {
             <Home />
             <Hero />
             <Events />
+            <Gifts />
             <Closing />
         </>
     )

@@ -30,7 +30,7 @@ export default function EventsCard({ title, date, startTime, endTime, location, 
             <div className="relative flex flex-col items-center justify-center">
 
                 {/* Space */}
-                <div className="flex flex-col gap-4 mb-10 sm:mb-10 items-center"></div>
+                <div className="flex flex-col gap-4 mb-1 sm:mb-1 items-center"></div>
 
                 {/* Title */}
                 <motion.div
@@ -103,7 +103,7 @@ export default function EventsCard({ title, date, startTime, endTime, location, 
                     className="flex flex-col gap-4 mb-0 sm:mb-0 items-center"
                 >
                     <div className="space-y-1 py-2 sm:py-3">
-                        <h2 className="text-center font-serif tracking-wide text-xl md:text-xl sm:text-xl leading-tight text-black">
+                        <h2 className="text-center font-serif tracking-wide text-md md:text-md sm:text-md leading-tight text-black">
                             {address}
                         </h2>
                     </div>
