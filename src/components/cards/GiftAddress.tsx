@@ -32,8 +32,8 @@ export default function GiftAddress({ recipientName, address, waNo }: CardProps)
 
     return (
         <div className="bg-white/50 backdrop-blur-xs shadow-md rounded-2xl overflow-hidden p-2 w-95 h-fit mb-5">
-            <div className="flex flex-col gap-1">
-                <div className="flex flex-row border-2">
+            <div className="flex flex-col gap-2">
+                <div className="flex flex-row">
                     <div className="flex flex-col justify-center items-center w-full">
                         <div>
                             <h1 className={`${playfair.className} tracking-wide text-lg md:text-xl sm:text-lg leading-tight mb-1 sm:mb-1`}>

@@ -61,7 +61,14 @@ const config = {
                 accountName: "FULANA",
                 waConfirm: "081234567890",
             }
-        ]
+        ],
+        sendGifts: [
+            {
+                recipientName: "FULANA",
+                addressSendGifts: "Jl. Jend. Sudirman No.1, Jakarta",
+                waConfirmGifts: "081234567890",
+            }
+        ] 
     }
 };
 
