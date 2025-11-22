@@ -4,6 +4,7 @@ import Events from '@/components/sections/Events'
 import Location from '@/components/sections/Location';
 import Wishes from '@/components/sections/Wishes';
 import Gifts from '@/components/sections/Gifts';
+import Closing from '../sections/Closing';
 
 export default function MainContent() {
     return (
@@ -11,6 +12,7 @@ export default function MainContent() {
             <Home />
             <Hero />
             <Events />
+            <Closing />
         </>
     )
 }
