@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { Playfair_Display } from "next/font/google";
 import { Mea_Culpa } from "next/font/google";
-import Image from 'next/image';
 import { useState } from "react";
 
 const playfair = Playfair_Display({

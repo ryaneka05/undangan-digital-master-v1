@@ -13,6 +13,7 @@ export default function MainContent() {
             <Hero />
             <Events />
             <Gifts />
+            <Wishes />
             <Closing />
         </>
     )
