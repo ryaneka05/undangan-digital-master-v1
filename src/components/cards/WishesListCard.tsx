@@ -1,54 +1,31 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Clock, CheckCircle, XCircle, HelpCircle } from 'lucide-react'
 import { formatEventDate } from '@/lib/formatEventDate';
 
 export default function WishesListCard() {
     // Example wishes - replace with your actual data
-    const [wishes, setWishes] = useState([
-        {
-            id: 1,
-            name: "John Doe",
-            message: "Wishing you both a lifetime of love, laughter, and happiness! 🎉",
-            timestamp: "2024-12-24T23:20:00Z",
-            attending: "attending"
-        },
-        {
-            id: 2,
-            name: "Natalie",
-            message: "Wishing you both a lifetime of love, laughter, and happiness! 🎉",
-            timestamp: "2024-12-24T23:20:00Z",
-            attending: "attending"
-        },
-        {
-            id: 3,
-            name: "Abdur Rofi",
-            message: "Congratulations on your special day! May Allah bless your union! 🤲",
-            timestamp: "2024-12-25T23:08:09Z",
-            attending: "maybe"
-        },
-        {
-            id: 4,
-            name: "John Doe",
-            message: "Wishing you both a lifetime of love, laughter, and happiness! 🎉",
-            timestamp: "2024-12-24T23:20:00Z",
-            attending: "attending"
-        },
-        {
-            id: 5,
-            name: "Natalie",
-            message: "Wishing you both a lifetime of love, laughter, and happiness! 🎉",
-            timestamp: "2024-12-24T23:20:00Z",
-            attending: "attending"
-        },
-        {
-            id: 6,
-            name: "Abdur Rofi",
-            message: "Congratulations on your special day! May Allah bless your union! 🤲",
-            timestamp: "2024-12-25T23:08:09Z",
-            attending: "maybe"
-        }
-    ]);
+    const [wishes, setWishes] = useState<any[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchWishes = async () => {
+            try {
+                const res = await fetch("/api/wishesApi");
+                const data = await res.json();
+                setWishes(data);
+            } catch(error) {
+                console.error("Gagal fetch:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchWishes();
+
+        const interval = setInterval(fetchWishes, 5000);
+        return () => clearInterval(interval);
+    }, []);
 
     const getAttendanceIcon = (status: string) => {
         switch (status) {
@@ -117,7 +94,7 @@ export default function WishesListCard() {
                                         <div className="flex items-center space-x-1 text-gray-500 text-xs">
                                             <Clock className="w-3 h-3" />
                                             <time className="truncate">
-                                                {formatEventDate(wish.timestamp)}
+                                                {formatEventDate(wish.createDateTime)}
                                             </time>
                                         </div>
                                     </div>
@@ -129,7 +106,7 @@ export default function WishesListCard() {
                                 </p>
 
                                 {/* Optional: Time indicator for recent messages */}
-                                {Date.now() - new Date(wish.timestamp).getTime() < 3600000 && (
+                                {Date.now() - new Date(wish.createDateTime).getTime() < 3600000 && (
                                     <div className="absolute top-2 right-2">
                                         <span className="px-2 py-1 rounded-full bg-rose-100 text-rose-600 text-xs font-medium">
                                             New
