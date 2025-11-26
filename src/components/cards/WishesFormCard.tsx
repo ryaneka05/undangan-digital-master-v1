@@ -1,7 +1,10 @@
 import { motion, AnimatePresence } from "framer-motion";
+import config from '@/config/config'; 
 import { Playfair_Display } from "next/font/google";
 import { Mea_Culpa } from "next/font/google";
 import { useState } from "react";
+import { runConfetti } from "@/lib/confetti";
+import useSWR, { mutate } from "swr";
 import {
     Calendar,
     Clock,
@@ -28,9 +31,11 @@ const meaCulpa = Mea_Culpa({
 
 export default function WishesFormCard() {
     const [showConfetti, setShowConfetti] = useState(false);
-    const [newWish, setNewWish] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const [guestName, setGuestName] = useState('');
     const [attendance, setAttendance] = useState('');
+    const [newWish, setNewWish] = useState('');
     const [isOpen, setIsOpen] = useState(false);
 
     const options = [
@@ -38,6 +43,48 @@ export default function WishesFormCard() {
         { value: 'NOT_ATTENDING', label: 'Tidak, saya tidak bisa hadir' },
         { value: 'MAYBE', label: 'Mungkin, saya akan konfirmasi nanti' }
     ];
+
+    const handleSubmit = async () => {
+        if (!guestName || !attendance || !newWish) {
+            alert("Semua field wajib diisi.");
+            return;
+        }
+
+        setIsSubmitting(true);
+
+        try {
+            const res = await fetch("/api/wishesApi", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    invitationId: parseInt(config.data.userId),
+                    name: guestName,
+                    message: newWish,
+                    attending: attendance
+                })
+            });
+
+            const data = await res.json();
+
+            if (!res.ok) {
+                setIsSubmitting(false);
+                throw new Error(data.error || "Gagal mengirim data");
+            }
+
+            await mutate("/api/wishesApi");
+
+            setGuestName("");
+            setNewWish("");
+            setAttendance("");
+            setShowConfetti(true);
+            runConfetti();            
+
+        } catch (error) {
+            alert("Gagal mengirim data!")
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
 
     return (
         <div className="bg-white/50 backdrop-blur-xs shadow-md rounded-2xl overflow-hidden p-2 w-85 sm:w-85 md:w-95 h-fit mb-5">
@@ -58,6 +105,8 @@ export default function WishesFormCard() {
                         <input
                             type="text"
                             placeholder="Masukan nama kamu..."
+                            value={guestName}
+                            onChange={(e) => setGuestName(e.target.value)}
                             className="w-full px-4 py-2.5 rounded-xl bg-white/50 border border-blue-100 focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 transition-all duration-200 text-gray-700 placeholder-gray-400"
                             required
                         />
@@ -129,6 +178,8 @@ export default function WishesFormCard() {
                             </div>
                             <textarea
                                 placeholder="Kirimkan harapan dan doa untuk kedua mempelai..."
+                                value={newWish}
+                                onChange={(e) => setNewWish(e.target.value)}
                                 className="w-full h-32 p-4 rounded-xl  text-gray-700 bg-white/50 border border-blue-100 focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 resize-none transition-all duration-200"
                                 required
                             />
@@ -141,6 +192,7 @@ export default function WishesFormCard() {
                         <span className="text-sm">Berikan Doa Anda</span>
                     </div>
                     <motion.button
+                        onClick={handleSubmit}
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                         className={`flex items-center space-x-2 px-6 py-2.5 rounded-xl text-white font-medium transition-all duration-200

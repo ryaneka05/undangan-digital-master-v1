@@ -2,30 +2,42 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Clock, CheckCircle, XCircle, HelpCircle } from 'lucide-react'
 import { formatEventDate } from '@/lib/formatEventDate';
+import useSWR from "swr";
+
+const fetcher = (url: string) => fetch(url).then(r => r.json());
 
 export default function WishesListCard() {
-    // Example wishes - replace with your actual data
-    const [wishes, setWishes] = useState<any[]>([]);
-    const [loading, setLoading] = useState(true);
+    const { data: wishes, error, mutate, isLoading } = useSWR("/api/wishesApi", fetcher, {
+        revalidateOnFocus: true,
+    });
 
-    useEffect(() => {
-        const fetchWishes = async () => {
-            try {
-                const res = await fetch("/api/wishesApi");
-                const data = await res.json();
-                setWishes(data);
-            } catch(error) {
-                console.error("Gagal fetch:", error);
-            } finally {
-                setLoading(false);
-            }
-        };
+    if (isLoading) return <p>Loading...</p>;
+    if (error) return <p>Gagal memuat data.</p>;
 
-        fetchWishes();
+    if (!wishes || wishes.length === 0)
+        return <p className="p-4 text-center text-sm text-gray-500">Belum ada ucapan.</p>;
 
-        const interval = setInterval(fetchWishes, 5000);
-        return () => clearInterval(interval);
-    }, []);
+    //const [wishes, setWishes] = useState<any[]>([]);
+    //const [loading, setLoading] = useState(true);
+
+    // useEffect(() => {
+    //     const fetchWishes = async () => {
+    //         try {
+    //             const res = await fetch("/api/wishesApi");
+    //             const data = await res.json();
+    //             setWishes(data);
+    //         } catch(error) {
+    //             console.error("Gagal fetch:", error);
+    //         } finally {
+    //             setLoading(false);
+    //         }
+    //     };
+
+    //     fetchWishes();
+
+    //     const interval = setInterval(fetchWishes, 5000);
+    //     return () => clearInterval(interval);
+    // }, []);
 
     const getAttendanceIcon = (status: string) => {
         switch (status) {
@@ -60,7 +72,7 @@ export default function WishesListCard() {
         <div className="relative bg-white/50 backdrop-blur-xs shadow-md rounded-2xl py-6 w-85 sm:w-96 h-[350px] overflow-y-auto my-scroll">
             <div className="flex flex-col animate-scrollY gap-2">
                 <div className="flex flex-col justify-center items-center w-full">
-                    {wishes.map((wish, index) => (
+                    {wishes.map((wish: any, index: number) => (
                         <motion.div
                             key={wish.id}
                             initial={{ opacity: 0, y: 20 }}

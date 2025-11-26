@@ -2,7 +2,7 @@ import { prisma } from "@/lib/prisma";
 
 export async function GET() {
     try {
-        const data = await prisma.WishesInvitationGuest.findMany({
+        const data = await prisma.wishesInvitationGuest.findMany({
             orderBy: { createDateTime: "desc" },
         });
         return Response.json(data);

@@ -1,8 +1,8 @@
 const config = {
     data: {
         title: "Pernikahan Fulan & Fulana", // Nanti ini otomatis
-        description:
-            "Kami akan menikah dan mengundang Anda untuk turut merayakan momen istimewa ini.", // Nanti ini dibikin random
+        description: "Kami akan menikah dan mengundang Anda untuk turut merayakan momen istimewa ini.", // Nanti ini dibikin random
+        userId: "1",
         groomNicknameName: "Dilan",
         brideNicknameName: "Millea",
         groomFullNameName: "Dilan Pratama",
