@@ -1,11 +1,12 @@
 "use client";
-
 import { AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { useRouter } from "next/navigation";
 import LandingPage from "@/components/common/LandingPage";
 import Layout from "@/components/layout/Layout";
 import MainContent from '@/components/common/MainContent';
+
+export const dynamic = "force-dynamic";
 
 export default function UndanganPage() {    
     const [isInvitationOpen, setIsInvitationOpen] = useState(false);
