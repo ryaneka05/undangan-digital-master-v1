@@ -6,9 +6,7 @@ import { Suspense } from "react";
 
 export const dynamic = "force-dynamic";
 
-const ThemePage = dynamicImport(() => import(`./${theme.active}/page`), {
-  ssr: false,
-});
+const ThemePage = dynamicImport(() => import(`./${theme.active}/page`), { ssr: false });
 
 export default function Home() {
   return (
