@@ -1,8 +1,19 @@
-"use client"
-import theme from "@/config/theme"
+"use client";
+
+import dynamicImport from "next/dynamic";
+import theme from "@/config/theme";
+import { Suspense } from "react";
 
 export const dynamic = "force-dynamic";
-export default async function Home() {
-  const ThemePage = (await import(`./${theme.active}/page`)).default;
-  return <ThemePage/>
+
+const ThemePage = dynamicImport(() => import(`./${theme.active}/page`), {
+  ssr: false,
+});
+
+export default function Home() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ThemePage />
+    </Suspense>
+  );
 }
