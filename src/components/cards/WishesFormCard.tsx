@@ -4,7 +4,7 @@ import { Playfair_Display } from "next/font/google";
 import { Mea_Culpa } from "next/font/google";
 import { useState } from "react";
 import { runConfetti } from "@/lib/confetti";
-import { mutate } from "swr";
+import useSWR, { useSWRConfig } from "swr";
 import {
     Calendar,
     Clock,
@@ -39,6 +39,8 @@ export default function WishesFormCard() {
     const [isOpen, setIsOpen] = useState(false);
 
     const config = useInvitation();
+    const { mutate } = useSWRConfig();
+
 
     const options = [
         { value: 'ATTENDING', label: 'Ya, saya akan hadir' },
