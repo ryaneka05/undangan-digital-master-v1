@@ -4,7 +4,7 @@ import { Playfair_Display } from "next/font/google";
 import { Mea_Culpa } from "next/font/google";
 import { useState } from "react";
 import { runConfetti } from "@/lib/confetti";
-import useSWR, { mutate } from "swr";
+import { mutate } from "swr";
 import {
     Calendar,
     Clock,
