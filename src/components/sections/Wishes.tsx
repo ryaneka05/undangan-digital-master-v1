@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import FlowerFrame from "@/components/common/FlowerFrame";
-import config from '@/config/config';
+import { useInvitation } from "@/context/InvitationContext";
 import { Playfair_Display, Mea_Culpa } from "next/font/google";
 import WishesFormCard from "../cards/WishesFormCard";
 import WishesListCard from "../cards/WishesListCard"
 
 export default function Wishes() {
+    const config = useInvitation();
     return (
         <section id="wishes">
             <div>

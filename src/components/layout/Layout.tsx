@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef, ReactNode, Children } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Music, PauseCircle, PlayCircle } from 'lucide-react';
-import config from '@/config/config';
+//import config from '@/config/default';
+import { useInvitation } from "@/context/InvitationContext";
 import BottomBar from '@/components/layout/BottomBar';
 
 interface LayoutProps {
@@ -13,6 +14,7 @@ const Layout = ({ children }: LayoutProps) => {
     const [showToast, setShowToast] = useState(false);
     const audioRef = useRef<HTMLAudioElement | null>(null);
     const wasPlayingRef = useRef(false);
+    const config = useInvitation();
 
     // First useEffect to handle initial setup and auto-play attempt
     useEffect(() => {

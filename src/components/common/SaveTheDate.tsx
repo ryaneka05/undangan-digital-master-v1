@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
 import FlowerFrame from "@/components/common/FlowerFrame"
 import Image from 'next/image';
-import config from '@/config/config';
+import { useInvitation } from "@/context/InvitationContext";
 import { useEffect, useState } from "react";
 import AddToCalendarButton from './AddToCalendarButtonGoogle';
 
 export default function SaveTheDate() {
+    const config = useInvitation();
     const targetDate = new Date(config.data.dateTime.replace(" ", "T")).getTime();
     const [timeLeft, setTimeLeft] = useState({
         days: 0,
@@ -93,7 +94,7 @@ export default function SaveTheDate() {
                                         className="w-full h-full"
                                     >
                                         <Image
-                                            src="/assets/images/img-pengantin.jpg"
+                                            src={config.data.coupleImage}
                                             alt="Foto pengantin"
                                             width={500}
                                             height={700}
@@ -128,11 +129,11 @@ export default function SaveTheDate() {
                         {/* Add To Calendar */}
                         <div className="flex flex-col justify-center items-center gap-4 sm:gap-6 mb-5 sm:mb-5">
                             <AddToCalendarButton
-                                title="Pernikahan Andi & Sinta"
-                                description="Acara pernikahan Andi & Sinta."
-                                location="Gedung Serbaguna Jakarta"
-                                startDate="2025-06-15 10:00"
-                                endDate="2025-06-15 13:00"
+                                title={config.data.title}
+                                description={`Acara ${config.data.title}.`}
+                                location={config.data.location}
+                                startDate={config.data.startDateTime}
+                                endDate={config.data.endDateTime}
                             />
                         </div>
                     </div>

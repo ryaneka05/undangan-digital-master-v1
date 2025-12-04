@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import FlowerFrame from "@/components/common/FlowerFrame"
-import config from '@/config/config';
+import { useInvitation } from "@/context/InvitationContext";
 import { Playfair_Display } from "next/font/google";
 
 const playfair = Playfair_Display({
@@ -9,6 +9,7 @@ const playfair = Playfair_Display({
 });
 
 export default function Closing() {
+    const config = useInvitation();
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -61,7 +62,7 @@ export default function Closing() {
                         <div className="relative z-10 text-white flex flex-col items-center w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl px-0 sm:px-4">
                             <div className="inline-flex flex-col items-center space-y-1 px-4 sm:px-6 py-0 sm:py-0">
                                 <p className="text-center font-serif text-sm sm:text-sm md:text-sm">
-                                    Made with love by
+                                    Made with ❤️ by Salawase Studio
                                 </p>
                             </div>
                         </div>
@@ -75,7 +76,7 @@ export default function Closing() {
 
                                 {/* WhatsApp */}
                                 <a
-                                    href="https://wa.me/6281234567890"
+                                    href="https://wa.me/6287889202950"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition"

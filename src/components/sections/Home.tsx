@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import config from '@/config/config';
+import { useInvitation } from "@/context/InvitationContext";
 import { Playfair_Display } from "next/font/google";
 import FlowerFrame from "@/components/common/FlowerFrame"
 
@@ -10,6 +10,7 @@ const playfair = Playfair_Display({
 
 
 export default function Home() {
+    const config = useInvitation();
     return (
         <section id="home">
             <motion.div

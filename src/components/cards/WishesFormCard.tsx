@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import config from '@/config/config'; 
+import { useInvitation } from "@/context/InvitationContext"; 
 import { Playfair_Display } from "next/font/google";
 import { Mea_Culpa } from "next/font/google";
 import { useState } from "react";
@@ -37,6 +37,8 @@ export default function WishesFormCard() {
     const [attendance, setAttendance] = useState('');
     const [newWish, setNewWish] = useState('');
     const [isOpen, setIsOpen] = useState(false);
+
+    const config = useInvitation();
 
     const options = [
         { value: 'ATTENDING', label: 'Ya, saya akan hadir' },

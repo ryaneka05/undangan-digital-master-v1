@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import FlowerFrame from "@/components/common/FlowerFrame"
-import config from '@/config/config';
+import { useInvitation } from "@/context/InvitationContext";
 import Image from 'next/image';
 import { Playfair_Display } from "next/font/google";
 import { Mea_Culpa } from "next/font/google";
@@ -17,6 +17,7 @@ const meaCulpa = Mea_Culpa({
 });
 
 export default function Bride() {
+    const config = useInvitation();
     return (
         <section id="couple">
             <motion.div
@@ -93,7 +94,7 @@ export default function Bride() {
                                         className="w-full h-full"
                                     >
                                         <Image
-                                            src="/assets/images/bride-image.jpg"
+                                            src={config.data.brideImage}
                                             alt="Foto pengantin"
                                             width={500}
                                             height={700}
@@ -139,7 +140,7 @@ export default function Bride() {
                             transition={{ delay: 0.18 }}
                             className="flex flex-col gap-4 mb-5 sm:mb-5 items-center"
                         >
-                            <div className="inline-flex flex-col items-center space-y-1 px-20 sm:px-20 py-0 sm:py-0">
+                            <div className="inline-flex flex-col items-center space-y-1 px-1 sm:px-1 py-0 sm:py-0">
                                 <p className="text-center font-serif text-sm sm:text-sm md:text-sm">
                                     {config.data.parentBrideDescription}
                                 </p>
@@ -181,7 +182,7 @@ export default function Bride() {
                                         className="w-full h-full"
                                     >
                                         <Image
-                                            src="/assets/images/groom-image.jpg"
+                                            src={config.data.groomImage}
                                             alt="Foto pengantin"
                                             width={500}
                                             height={700}
@@ -227,7 +228,7 @@ export default function Bride() {
                             transition={{ delay: 0.33 }}
                             className="flex flex-col gap-4 mb-5 sm:mb-5 items-center"
                         >
-                            <div className="inline-flex flex-col items-center space-y-1 px-20 sm:px-20 py-0 sm:py-0">
+                            <div className="inline-flex flex-col items-center space-y-1 px-1 sm:px-1 py-0 sm:py-0">
                                 <p className="text-center font-serif text-sm sm:text-sm md:text-sm">
                                     {config.data.parentGroomDescription}
                                 </p>

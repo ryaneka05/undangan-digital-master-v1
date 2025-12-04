@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
 import FlowerFrame from "@/components/common/FlowerFrame"
 import Card from '../cards/EventsCard';
-import config from '@/config/config';
+import { useInvitation } from "@/context/InvitationContext";
 
 export default function Event() {
+    const config = useInvitation();
     return (
         <section id="location">
             <motion.div

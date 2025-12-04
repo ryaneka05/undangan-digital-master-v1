@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import FlowerFrame from "@/components/common/FlowerFrame";
-import config from '@/config/config';
+import { useInvitation } from "@/context/InvitationContext";
 import { Playfair_Display, Mea_Culpa } from "next/font/google";
 import AccountCard from "@/components/cards/AccountCard";
 import GiftAddress from "@/components/cards/GiftAddress";
@@ -17,6 +17,7 @@ const meaCulpa = Mea_Culpa({
 });
 
 export default function Gifts() {
+    const config = useInvitation();
     return (
         <section id="gifts">
             <motion.div

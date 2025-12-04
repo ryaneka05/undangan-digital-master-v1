@@ -1,6 +1,5 @@
-"use client";
-export const dynamic = "force-dynamic";
-import config from '@/config/config';
+"use client"
+import { useInvitation } from "@/context/InvitationContext";
 import { motion } from 'framer-motion';
 import { useSearchParams } from 'next/navigation';
 import { Playfair_Display } from "next/font/google";
@@ -15,7 +14,8 @@ const LandingPage = ({ onOpenInvitation }: { onOpenInvitation: () => void }) => 
     /* Get Param Guest */
     const searchParams = useSearchParams();
     const getGuestName = decodeURIComponent(searchParams.get("to") || "Nama Tamu");
-
+    const config = useInvitation();
+    
     return (
         <motion.div
             initial={{ opacity: 0 }}
