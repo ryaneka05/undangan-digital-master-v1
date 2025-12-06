@@ -13,8 +13,8 @@ const config: InvitationConfig = {
         brideFullNameName: "Anih Handayani",
         parentGroom: "Bapak Sarman & Ibu Wartinah",
         parentGroomDescription: "Putra dari Bapak Sarman & Ibu Wartinah",
-        parentBride: "Bapak ra'i dan Ibu Odah",
-        parentBrideDescription: "Putri dari Bapak ra'i dan Ibu Odah",
+        parentBride: "Bapak Ra'i dan Ibu Odah",
+        parentBrideDescription: "Putri dari Bapak Ra'i dan Ibu Odah",
         coupleImage: "/assets/images/couple-image-ibnu-anih.jpg",
         groomImage: "/assets/images/groom-image-ibnu.jpg",
         brideImage: "/assets/images/bride-image-anih.jpg",
@@ -63,6 +63,12 @@ const config: InvitationConfig = {
                 accountNumber: "1670860686",
                 accountName: "Anih Handayani",
                 waConfirm: "081907863151",
+            },
+            {
+                bank: "BCA",
+                accountNumber: "1670784017",
+                accountName: "Ibnu Malik",
+                waConfirm: "081284157829",
             },
         ],
         sendGifts: [
