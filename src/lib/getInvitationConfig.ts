@@ -1,14 +1,5 @@
 import defaultConfig from "@/config/default";
-import ibnuAnihConfig from "@/config/config-ibnu-anih";
-// IMPORT MANUAL SEMUA CONFIG YANG ADA
-// import jokoBudiConfig from "@/config/joko-budi";
-
-// Hardcode semua config di sini
-const allInvitationConfigs = [
-    ibnuAnihConfig,
-    // jokoBudiConfig,
-    // tambah config lainnya di sini...
-];
+import { allInvitationConfigs } from "@/config";
 
 export function getInvitationConfig(slug?: string) {
     console.log('🔍 [getInvitationConfig] Slug requested:', slug);
