@@ -1,4 +1,4 @@
-import defaultConfig from "@/config/default";
+import defaultConfig from "@/config/default-bak";
 import { allInvitationConfigs } from "@/config";
 
 export function getInvitationConfig(slug?: string) {

@@ -4,7 +4,7 @@ import theme from "@/config/theme";
 import { Suspense } from "react";
 import { InvitationContext } from "@/context/InvitationContext";
 import { InvitationConfig } from "@/types/InvitationConfig";
-import defaultConfig from "@/config/default";
+import defaultConfig from "@/config/default-bak";
 
 const ThemePage = dynamicImport(
   () => import(`./${theme.active}/page`),
