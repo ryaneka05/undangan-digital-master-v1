@@ -14,6 +14,7 @@ export async function generateMetadata({
 
     return {
         title: config.data.title,
+        metadataBase: new URL('https://www.salawase-studio.com'),
         description: config.data.description,
 
         openGraph: {

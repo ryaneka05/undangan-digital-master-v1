@@ -20,6 +20,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: config.data.title,
+  metadataBase: new URL('https://www.salawase-studio.com'),
   description: config.data.description,
   openGraph: {
     title: config.data.title,
