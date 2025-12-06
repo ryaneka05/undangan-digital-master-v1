@@ -51,7 +51,7 @@ const config: InvitationConfig = {
             }
         ],
         audio: {
-            src: "/assets/audio/AriLasso-CintaTerakhir.mp3", // or /audio/nature-sound.mp3
+            src: "/ariLasso-cintaterakhir.mp3", // or /audio/nature-sound.mp3
             title: "Ari Lasso - Cinta Terakhir", // or Nature Sound
             autoplay: true,
             loop: true,
