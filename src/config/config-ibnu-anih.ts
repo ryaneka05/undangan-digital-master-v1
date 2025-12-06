@@ -15,9 +15,9 @@ const config: InvitationConfig = {
         parentGroomDescription: "Putra dari Bapak Sarman & Ibu Wartinah",
         parentBride: "Bapak Ra'i dan Ibu Odah",
         parentBrideDescription: "Putri dari Bapak Ra'i dan Ibu Odah",
-        coupleImage: "/assets/images/couple-image-ibnu-anih.jpg",
-        groomImage: "/assets/images/groom-image-ibnu.jpg",
-        brideImage: "/assets/images/bride-image-anih.jpg",
+        coupleImage: "/images/couple-image-ibnu-anih.jpg",
+        groomImage: "/images/groom-image-ibnu.jpg",
+        brideImage: "/images/bride-image-anih.jpg",
         dateTime: "2025-12-26 08:00:00",
         startDateTime: "2025-12-26 08:00",
         endDateTime: "2025-12-26 17:30",
@@ -28,8 +28,8 @@ const config: InvitationConfig = {
         time: "08:00 - 17:30 WIB",
         location: "Kediaman Mempelai Wanita",
         address: "Kp Babakan Loa, Ds Sawarna Timur, Kec Bayah Kab. Lebak",
-        ogImage: "/assets/images/couple-image-ibnu-anih.jpg",
-        favicon: "/assets/images/favicon.ico",
+        ogImage: "/images/couple-image-ibnu-anih.jpg",
+        favicon: "/images/favicon.ico",
         agenda: [
             {
                 title: "Akad Nikah",
@@ -38,7 +38,7 @@ const config: InvitationConfig = {
                 endTime: "Selesai",
                 location: "Kediaman Mempelai Wanita",
                 address: "Kp Babakan Loa, Ds Sawarna Timur, Kec Bayah Kab. Lebak",
-                icImage: "/assets/icons/ic-building.png",
+                icImage: "/icons/ic-building.png",
             },
             {
                 title: "Resepsi Nikah",
@@ -47,11 +47,11 @@ const config: InvitationConfig = {
                 endTime: "Selesai",
                 location: "Kediaman Mempelai Wanita",
                 address: "Kp Babakan Loa, Ds Sawarna Timur, Kec Bayah Kab. Lebak",
-                icImage: "/assets/icons/ic-building.png",
+                icImage: "/icons/ic-building.png",
             }
         ],
         audio: {
-            src: "/ariLasso-cintaterakhir.mp3", // or /audio/nature-sound.mp3
+            src: "/audio/AriLasso-CintaTerakhir.mp3", // or /audio/nature-sound.mp3
             title: "Ari Lasso - Cinta Terakhir", // or Nature Sound
             autoplay: true,
             loop: true,

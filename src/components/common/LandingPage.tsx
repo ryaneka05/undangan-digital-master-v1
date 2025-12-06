@@ -27,7 +27,7 @@ const LandingPage = ({ onOpenInvitation }: { onOpenInvitation: () => void }) => 
             <div className="relative flex flex-col items-center justify-center min-h-screen w-full bg-[#022545] bg-cover overflow-hidden">
 
                 {/* Main Content with Decorative Background */}
-                <div className="relative z-10 text-white min-h-screen flex flex-col items-center bg-[url('/assets/images/bg-blue.jpg')] bg-cover bg-center bg-no-repeat w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl px-0 sm:px-4">
+                <div className="relative z-10 text-white min-h-screen flex flex-col items-center bg-[url('/images/bg-blue.jpg')] bg-cover bg-center bg-no-repeat w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl px-0 sm:px-4">
 
                     {/* Decorative Flower */}
                     <FlowerFrame />
@@ -132,7 +132,7 @@ const LandingPage = ({ onOpenInvitation }: { onOpenInvitation: () => void }) => 
                                 className="group relative w-50 bg-[#e4c389] text-white px-2 py-3 sm:px-8 sm:py-3 rounded-full shadow-lg hover:bg-[#ebbd6d] transition-all duration-200">
                                 <span className="relative z-10 flex items-center justify-center gap-2">
                                     <img
-                                        src="/assets/icons/ic-open-envelope.png"
+                                        src="/icons/ic-open-envelope.png"
                                         alt="icon"
                                         className="w-5 h-5"
                                     />

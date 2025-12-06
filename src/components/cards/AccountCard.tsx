@@ -80,7 +80,7 @@ export default function AccountCard({ bankName, rekNo, accountName, waNo }: Card
         return icName;
     }
 
-    const src = `/assets/icons/bank/${iconBank()}`;
+    const src = `/icons/bank/${iconBank()}`;
 
     return (
         <div className="bg-white/50 backdrop-blur-xs shadow-md rounded-2xl overflow-hidden p-2 w-85 sm:w-85 md:w-95 h-fit mb-5">
@@ -101,7 +101,7 @@ export default function AccountCard({ bankName, rekNo, accountName, waNo }: Card
                         <div className="flex flex-col w-full">
                             <div>
                                 <img
-                                    src="/assets/icons/ic-card-bank.png"
+                                    src="/icons/ic-card-bank.png"
                                     alt="ic-card-bank"
                                     className="h-15 w-15"
                                 />
@@ -111,7 +111,7 @@ export default function AccountCard({ bankName, rekNo, accountName, waNo }: Card
                                     onClick={handleCopy} >
                                     {!copied && (
                                         <img
-                                            src="/assets/icons/ic-copy.png"
+                                            src="/icons/ic-copy.png"
                                             alt="ic-copy"
                                             className="w-4 h-4"
                                         />)}
@@ -128,7 +128,7 @@ export default function AccountCard({ bankName, rekNo, accountName, waNo }: Card
                                 >
                                     <span className="relative z-10 flex items-center justify-start cursor-pointer gap-2">
                                         <img
-                                            src="/assets/icons/ic-wa-button.png"
+                                            src="/icons/ic-wa-button.png"
                                             alt="ic-wa"
                                             className="w-4 h-4"
                                         />

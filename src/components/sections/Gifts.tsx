@@ -35,7 +35,7 @@ export default function Gifts() {
                         <div className="relative z-10 text-white flex flex-col items-center w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl px-0 sm:px-4">
                             <div className="inline-flex flex-col items-center space-y-1 px-5 sm:px-6 py-0 sm:py-0">
                                 <img
-                                    src="/assets/icons/ic-gift.png"
+                                    src="/icons/ic-gift.png"
                                     alt="gift"
                                     className="w-20 h-20 mb-5 sm:mb-5"
                                 ></img>

@@ -119,7 +119,7 @@ export default function EventsCard({ title, date, startTime, endTime, location, 
                     className="group relative w-50 bg-[#e4c389] text-white px-2 py-3 sm:px-8 sm:py-3 rounded-full shadow-lg hover:bg-[#ebbd6d] transition-all duration-200">
                     <span className="relative z-10 flex items-center justify-center gap-2">
                         <img
-                            src="/assets/icons/ic-pin.png"
+                            src="/icons/ic-pin.png"
                             alt="icon"
                             className="w-5 h-5"
                         />

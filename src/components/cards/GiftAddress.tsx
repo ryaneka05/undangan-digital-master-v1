@@ -76,7 +76,7 @@ export default function GiftAddress({ recipientName, address, waNo }: CardProps)
                         </div>
                         <div>
                             <img
-                                src="/assets/icons/ic-gift.png"
+                                src="/icons/ic-gift.png"
                                 alt="ic-card-bank"
                                 className="h-10 w-10 mb-1.5"
                             />
@@ -94,7 +94,7 @@ export default function GiftAddress({ recipientName, address, waNo }: CardProps)
                                 onClick={handleCopy} >
                                 {!copied && (
                                     <img
-                                        src="/assets/icons/ic-copy.png"
+                                        src="/icons/ic-copy.png"
                                         alt="ic-copy"
                                         className="w-4 h-4"
                                     />)}
@@ -111,7 +111,7 @@ export default function GiftAddress({ recipientName, address, waNo }: CardProps)
                             >
                                 <span className="relative z-10 flex items-center justify-start cursor-pointer gap-2">
                                     <img
-                                        src="/assets/icons/ic-wa-button.png"
+                                        src="/icons/ic-wa-button.png"
                                         alt="ic-wa"
                                         className="w-4 h-4"
                                     />

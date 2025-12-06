@@ -82,7 +82,7 @@ export default function Closing() {
                                     className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition"
                                 >
                                     <img
-                                        src="/assets/icons/sosmed/ic-whatsapp.png"
+                                        src="/icons/sosmed/ic-whatsapp.png"
                                         alt="whatsapp"
                                         className="w-5 h-5"
                                     />

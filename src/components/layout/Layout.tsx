@@ -190,7 +190,7 @@ const Layout = ({ children }: LayoutProps) => {
                     {/* Background */}
                     <div className="relative flex flex-col items-center justify-center min-h-screen w-full bg-[#022545] bg-cover overflow-hidden">
                         {/* Main Content with Decorative Background */}
-                        <div className="relative z-10 text-white min-h-screen flex flex-col items-center bg-[url('/assets/images/bg-blue.jpg')] bg-cover bg-center bg-no-repeat w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl px-0 sm:px-4">
+                        <div className="relative z-10 text-white min-h-screen flex flex-col items-center bg-[url('/images/bg-blue.jpg')] bg-cover bg-center bg-no-repeat w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl px-0 sm:px-4">
                             <main className="relative h-full w-full">
                                 {children}
                             </main>

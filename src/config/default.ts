@@ -16,9 +16,9 @@ const config: InvitationConfig  = {
         parentGroomDescription: "Putri Pertama dari Bapak Groom Dan Ibu Groom",
         parentBride: "Bapak Bride & Ibu Bride",
         parentBrideDescription: "Putri Pertama dari Bapak Bride Dan Ibu Bride",
-        coupleImage: "/assets/images/img-pengantin.jpg",
-        groomImage: "/assets/images/groom-image.jpg",
-        brideImage: "/assets/images/bride-image.jpg",
+        coupleImage: "/images/img-pengantin.jpg",
+        groomImage: "/images/groom-image.jpg",
+        brideImage: "/images/bride-image.jpg",
         dateTime: "2025-11-16 08:00:00",
         startDateTime: "2025-11-16 08:00",
         endDateTime: "2025-11-16 17:30",
@@ -29,8 +29,8 @@ const config: InvitationConfig  = {
         time: "16:16 - 17:30 WIB",
         location: "Grand Ballroom, Hotel Majesty",
         address: "Jl. Jend. Sudirman No.1, Jakarta",
-        ogImage: "/assets/images/og-image.jpg",
-        favicon: "/assets/images/favicon.ico",
+        ogImage: "/images/og-image.jpg",
+        favicon: "/images/favicon.ico",
         agenda: [
             {
                 title: "Akad Nikah",
@@ -39,7 +39,7 @@ const config: InvitationConfig  = {
                 endTime: "17:30",
                 location: "Grand Ballroom, Hotel Majesty",
                 address: "Jl. Jend. Sudirman No.1, Jakarta",
-                icImage: "/assets/icons/ic-building.png",
+                icImage: "/icons/ic-building.png",
             },
             {
                 title: "Resepsi Nikah",
@@ -48,11 +48,11 @@ const config: InvitationConfig  = {
                 endTime: "17:30",
                 location: "Grand Ballroom, Hotel Majesty",
                 address: "Jl. Jend. Sudirman No.1, Jakarta",
-                icImage: "/assets/icons/ic-building.png",
+                icImage: "/icons/ic-building.png",
             }
         ],
         audio: {
-            src: "/assets/audio/fulfilling-humming.mp3", // or /audio/nature-sound.mp3
+            src: "/audio/fulfilling-humming.mp3", // or /audio/nature-sound.mp3
             title: "Fulfilling Humming", // or Nature Sound
             autoplay: true,
             loop: true,
