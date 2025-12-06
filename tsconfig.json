@@ -30,6 +30,6 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts",
     "global.d.ts"
-, "prisma.config.ts-copy"  ],
+, "prisma.config.ts-copy", "next.config.ts.bak"  ],
   "exclude": ["node_modules"]
 }
