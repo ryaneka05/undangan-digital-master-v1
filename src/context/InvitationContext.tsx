@@ -2,7 +2,7 @@
 
 import { createContext, useContext } from "react";
 import { InvitationConfig } from "@/types/InvitationConfig";
-import defaultConfig from "@/config/default-bak";
+import defaultConfig from "@/config/default";
 
 export const InvitationContext = createContext<InvitationConfig>(defaultConfig);
 

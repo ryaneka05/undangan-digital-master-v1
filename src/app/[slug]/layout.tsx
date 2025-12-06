@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getInvitationConfig } from "@/lib/getInvitationConfig";
-import defaultConfig from "@/config/default-bak";
+import defaultConfig from "@/config/default";
 
 export async function generateMetadata({
     params,
