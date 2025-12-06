@@ -1,84 +1,83 @@
 import { InvitationConfig } from "@/types/InvitationConfig";
-
-const config: InvitationConfig  = {
-    slug: "default",
+const config: InvitationConfig = {
+    slug: "ibnu-anih",
     data: {
-        title: "Pernikahan Fulan & Fulana", // Nanti ini otomatis
-        description: "Kami akan menikah dan mengundang Anda untuk turut merayakan momen istimewa ini.", // Nanti ini dibikin random
-        userId: "1",
-        url: "https://salawase-studio.vercel.app",
+        title: "Pernikahan Ibnu & Anih",
+        description: "Kami akan menikah dan mengundang Anda untuk turut merayakan momen istimewa ini.",
+        userId: "2",
+        url: "https://salawase-studio.vercel.app/ibnu-anih",
         siteName: "Salawase-Studio",
-        groomNicknameName: "Dilan",
-        brideNicknameName: "Millea",
-        groomFullNameName: "Dilan Pratama",
-        brideFullNameName: "Milea Pratiwi",        
-        parentGroom: "Bapak Groom & Ibu Groom",
-        parentGroomDescription: "Putri Pertama dari Bapak Groom Dan Ibu Groom",
-        parentBride: "Bapak Bride & Ibu Bride",
-        parentBrideDescription: "Putri Pertama dari Bapak Bride Dan Ibu Bride",
-        coupleImage: "/images/img-pengantin.jpg",
-        groomImage: "/images/groom-image.jpg",
-        brideImage: "/images/bride-image.jpg",
-        dateTime: "2025-11-16 08:00:00",
-        startDateTime: "2025-11-16 08:00",
-        endDateTime: "2025-11-16 17:30",
-        date: "11 November 2025",
-        maps_url: "https://goo.gl/maps/abcdef",
+        groomNicknameName: "Ibnu",
+        brideNicknameName: "Anih",
+        groomFullNameName: "Ibnu Malik",
+        brideFullNameName: "Anih Handayani",
+        parentGroom: "Bapak Sarman & Ibu Wartinah",
+        parentGroomDescription: "Putra dari Bapak Sarman & Ibu Wartinah",
+        parentBride: "Bapak Ra'i dan Ibu Odah",
+        parentBrideDescription: "Putri dari Bapak Ra'i dan Ibu Odah",
+        coupleImage: "/images/couple-image-ibnu-anih.jpg",
+        groomImage: "/images/groom-image-ibnu.jpg",
+        brideImage: "/images/bride-image-anih.jpg",
+        dateTime: "2025-12-26 08:00:00",
+        startDateTime: "2025-12-26 08:00",
+        endDateTime: "2025-12-26 17:30",
+        date: "26 Desember 2025",
+        maps_url: "https://maps.app.goo.gl/ta5WVpZ8Deu5V6wVA",
         maps_embed:
-            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0000000000005!2d106.8270733147699!3d-6.175392995514422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f4f1b6d7b1e7%3A0x2e69f4f1b6d7b1e7!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1633666820004!5m2!1sid!2sid",
-        time: "16:16 - 17:30 WIB",
-        location: "Grand Ballroom, Hotel Majesty",
-        address: "Jl. Jend. Sudirman No.1, Jakarta",
-        ogImage: "/images/og-image.jpg",
+            "https://maps.app.goo.gl/ta5WVpZ8Deu5V6wVA",
+        time: "08:00 - 17:30 WIB",
+        location: "Kediaman Mempelai Wanita",
+        address: "Kp Babakan Loa, Ds Sawarna Timur, Kec Bayah Kab. Lebak",
+        ogImage: "/images/couple-image-ibnu-anih.jpg",
         favicon: "/images/favicon.ico",
         agenda: [
             {
                 title: "Akad Nikah",
-                date: "2024-12-24",
-                startTime: "16:16",
-                endTime: "17:30",
-                location: "Grand Ballroom, Hotel Majesty",
-                address: "Jl. Jend. Sudirman No.1, Jakarta",
+                date: "26 Desember 2025",
+                startTime: "08:00",
+                endTime: "Selesai",
+                location: "Kediaman Mempelai Wanita",
+                address: "Kp Babakan Loa, Ds Sawarna Timur, Kec Bayah Kab. Lebak",
                 icImage: "/icons/ic-building.png",
             },
             {
                 title: "Resepsi Nikah",
-                date: "2024-12-24",
-                startTime: "16:16",
-                endTime: "17:30",
-                location: "Grand Ballroom, Hotel Majesty",
-                address: "Jl. Jend. Sudirman No.1, Jakarta",
+                date: "26 Desember 2025",
+                startTime: "09:00",
+                endTime: "Selesai",
+                location: "Kediaman Mempelai Wanita",
+                address: "Kp Babakan Loa, Ds Sawarna Timur, Kec Bayah Kab. Lebak",
                 icImage: "/icons/ic-building.png",
             }
         ],
         audio: {
-            src: "/audio/fulfilling-humming.mp3", // or /audio/nature-sound.mp3
-            title: "Fulfilling Humming", // or Nature Sound
+            src: "/audio/ari-lasso-cinta-terakhir.mp3", // or /audio/nature-sound.mp3
+            title: "Ari Lasso - Cinta Terakhir", // or Nature Sound
             autoplay: true,
             loop: true,
-            toastDuration: 3000,
+            toastDuration: 276000,
         },
         banks: [
             {
-                bank: "BRI",
-                accountNumber: "1234567890",
-                accountName: "FULAN",
-                waConfirm: "081234567890",
+                bank: "BCA",
+                accountNumber: "1670860686",
+                accountName: "Anih Handayani",
+                waConfirm: "081907863151",
             },
             {
-                bank: "BRI",
-                accountNumber: "0987654321",
-                accountName: "FULANA",
-                waConfirm: "081234567890",
-            }
+                bank: "BCA",
+                accountNumber: "1670784017",
+                accountName: "Ibnu Malik",
+                waConfirm: "081284157829",
+            },
         ],
         sendGifts: [
             {
-                recipientName: "FULANA",
-                addressSendGifts: "Jl. Jend. Sudirman No.1, Jakarta",
-                waConfirmGifts: "081234567890",
+                recipientName: "Anih Handayani",
+                addressSendGifts: "Puri Harmoni Pasir Mukti Jl Pinus 2 C28 No 21",
+                waConfirmGifts: "081907863151",
             }
-        ] 
+        ]
     }
 };
 
