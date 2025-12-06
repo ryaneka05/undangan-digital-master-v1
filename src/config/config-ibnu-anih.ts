@@ -64,12 +64,6 @@ const config: InvitationConfig = {
                 accountName: "Anih Handayani",
                 waConfirm: "081907863151",
             },
-            {
-                bank: "BCA",
-                accountNumber: "1670784017",
-                accountName: "Ibnu Malik",
-                waConfirm: "081284157829",
-            },
         ],
         sendGifts: [
             {
