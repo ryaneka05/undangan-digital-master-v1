@@ -8,10 +8,5 @@ export default async function UndanganPage({ params, }: { params: Promise<{ slug
     console.log('Cek ini slug',slug);
     const config = getInvitationConfig(slug);
 
-    //return <UndanganClient config={config}/>;
-    return (
-    <div>
-        <h1>SLUG: {slug}</h1>
-    </div>
-    );
+    return <UndanganClient config={config}/>;
 }
