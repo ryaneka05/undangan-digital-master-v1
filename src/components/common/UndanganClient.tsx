@@ -8,7 +8,7 @@ import { InvitationConfig } from "@/types/InvitationConfig";
 import defaultConfig from "@/config/default";
 
 const ThemePage = dynamicImport(
-    () => import(`@/app/${theme.active}/page`),
+    () => import(`/${theme.active}/page`),
     { ssr: false }
 );
 
