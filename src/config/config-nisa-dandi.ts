@@ -55,8 +55,8 @@ const config: InvitationConfig = {
             }
         ],
         audio: {
-            src: "/audio/ari-lasso-cinta-terakhir.mp3", // or /audio/nature-sound.mp3
-            title: "Ari Lasso - Cinta Terakhir", // or Nature Sound
+            src: "/audio/rossa-ft-afgan_kamu-yang-kutunggu.mp3", // or /audio/nature-sound.mp3
+            title: "Rossa ft Afgan - Kamu Yang Kutunggu", // or Nature Sound
             autoplay: true,
             loop: true,
             toastDuration: 276000,
