@@ -1,7 +1,9 @@
 import { getInvitationConfig } from "@/lib/getInvitationConfig";
-import UndanganClient from "@/app/page";
+import UndanganClient from "@/components/common/UndanganClient";
 
-export default async function UndanganPage({ params, }: { params: Promise<{ slug: string }> }) {
+export const dynamic = "force-dynamic";
+
+export default async function UndanganPage({ params, }: { params: Promise<{ slug: string }>; }) {
     const { slug } = await params;
     console.log(slug);
     const config = getInvitationConfig(slug);
