@@ -29,6 +29,7 @@ export default function Event() {
                                 endTime={item.endTime}
                                 location={item.location}
                                 address={item.address}
+                                maps_url={item.maps_url}
                                 image={item.icImage}
                             />
                         ))}

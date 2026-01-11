@@ -6,6 +6,8 @@ export interface AgendaItem {
     location: string;
     address: string;
     icImage: string;
+    maps_url: string;
+    maps_embed : string;
 }
 
 export interface BankItem {

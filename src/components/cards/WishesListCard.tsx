@@ -4,19 +4,32 @@ import { Clock, CheckCircle, XCircle, HelpCircle } from 'lucide-react'
 import { formatEventDate } from '@/lib/formatEventDate';
 import useSWR from "swr";
 
-const fetcher = (url: string) => fetch(url).then(r => r.json());
+const fetcher =  async (url: string) => {
+    const res = await fetch(url);
+
+    if (!res.ok) {
+        throw new Error("Server error");
+    }
+
+    return res.json();
+};
 
 export default function WishesListCard() {
-    const { data: wishes, error, mutate, isLoading } = useSWR("/api/wishesApi", fetcher, {
+    // Metode SWR
+    const id = "1";
+    const { data, error, mutate, isLoading } = useSWR(`/api/wishesApi/${id}`, fetcher, {
         revalidateOnFocus: true,
     });
 
     if (isLoading) return <p>Loading...</p>;
-    if (error) return <p>Gagal memuat data.</p>;
 
+    if (error && error.status >= 500) return <p>Gagal memuat data.</p>;
+
+    const wishes = Array.isArray(data) ? data : [];
     if (!wishes || wishes.length === 0)
         return <p className="p-4 text-center text-sm text-gray-500">Belum ada ucapan.</p>;
 
+    // Metode UseEffect
     //const [wishes, setWishes] = useState<any[]>([]);
     //const [loading, setLoading] = useState(true);
 

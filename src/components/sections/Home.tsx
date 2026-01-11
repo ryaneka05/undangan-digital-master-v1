@@ -57,9 +57,9 @@ export default function Home() {
                             >
                                 <div className="space-y-1 py-2 sm:py-3">
                                     <h1 className={`${playfair.className} tracking-wide text-5xl md:text-6xl sm:text-4xl leading-tight`}>
-                                        {config.data.groomNicknameName}
-                                        <span className="mx-2 sm:mx-3">&</span>
                                         {config.data.brideNicknameName}
+                                        <span className="mx-2 sm:mx-3">&</span>
+                                        {config.data.groomNicknameName}
                                     </h1>
                                 </div>
                             </motion.div>

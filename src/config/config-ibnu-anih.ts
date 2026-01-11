@@ -39,6 +39,9 @@ const config: InvitationConfig = {
                 location: "Kediaman Mempelai Wanita",
                 address: "Kp Babakan Loa, Ds Sawarna Timur, Kec Bayah Kab. Lebak",
                 icImage: "/icons/ic-building.png",
+                maps_url: "https://maps.app.goo.gl/ta5WVpZ8Deu5V6wVA",
+                maps_embed:
+                    "https://maps.app.goo.gl/ta5WVpZ8Deu5V6wVA",
             },
             {
                 title: "Resepsi Nikah",
@@ -48,6 +51,9 @@ const config: InvitationConfig = {
                 location: "Kediaman Mempelai Wanita",
                 address: "Kp Babakan Loa, Ds Sawarna Timur, Kec Bayah Kab. Lebak",
                 icImage: "/icons/ic-building.png",
+                maps_url: "https://maps.app.goo.gl/ta5WVpZ8Deu5V6wVA",
+                maps_embed:
+                    "https://maps.app.goo.gl/ta5WVpZ8Deu5V6wVA",
             }
         ],
         audio: {

@@ -21,10 +21,12 @@ interface CardProps {
     endTime: string;
     location: string;
     address: string;
+    maps_url: string;
     image: string;
 }
 
-export default function EventsCard({ title, date, startTime, endTime, location, address, image }: CardProps) {
+export default function EventsCard({ title, date, startTime, endTime, location, address, maps_url, image }: CardProps) {
+    console.log(`MAPS URL :`,maps_url)
     return (
         <div className="border-5 border-[#EBBD6D] bg-white shadow-md rounded-xl overflow-hidden w-85 h-120 mb-10">
             <div className="relative flex flex-col items-center justify-center">
@@ -111,7 +113,7 @@ export default function EventsCard({ title, date, startTime, endTime, location, 
 
                 {/* button Maps */}
                 <motion.a
-                    href={`https://www.google.com/maps?q=${encodeURIComponent(address)}`}
+                    href={maps_url}
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.02 }}
