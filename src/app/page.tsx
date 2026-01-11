@@ -1,5 +1,8 @@
 import UndanganClient from "@/components/common/UndanganClient";
 
 export default function HomePage() {
-  return <UndanganClient />;
+  //return <UndanganClient />;
+  return (
+    <h1>Hello !!</h1>
+  )
 }
