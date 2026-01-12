@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Clock, CheckCircle, XCircle, HelpCircle } from 'lucide-react'
 import { formatEventDate } from '@/lib/formatEventDate';
+import { useInvitation } from "@/context/InvitationContext";
 import useSWR from "swr";
 
 const fetcher =  async (url: string) => {
@@ -16,8 +17,10 @@ const fetcher =  async (url: string) => {
 
 export default function WishesListCard() {
     // Metode SWR
-    const id = "1";
-    const { data, error, mutate, isLoading } = useSWR(`/api/wishesApi/${id}`, fetcher, {
+    const config = useInvitation();
+    const id = config.data.userId;
+
+    const { data, error, mutate, isLoading } = useSWR(`/api/wishesApi?invitationId=${id}`, fetcher, {
         revalidateOnFocus: true,
     });
 

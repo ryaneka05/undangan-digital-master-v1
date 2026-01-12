@@ -1,11 +1,27 @@
 import { prisma } from "@/lib/prisma";
 
-export async function GET() {
+export async function GET(request : Request, { params } : { params : { id: string } }) {
     try {
-        const data = await prisma.wishesInvitationGuest.findMany({
-            orderBy: { createDateTime: "desc" },
-        });
-        return Response.json(data);
+        const { searchParams  } = new URL(request.url);
+        const invitationId  = searchParams.get("invitationId");
+
+        if (invitationId) {
+            const data = await prisma.wishesInvitationGuest.findMany({
+                where: {
+                    invitationId: Number(invitationId)
+                },
+                orderBy: { 
+                    createDateTime: "desc" 
+                },
+            });
+            return Response.json(data);
+        }
+        else {
+            const data = await prisma.wishesInvitationGuest.findMany({
+                orderBy: { createDateTime: "desc" },
+            });
+            return Response.json(data);
+        }
     } catch (err: any) {
         return Response.json({ error: err.message }, { status: 500 });
     }
