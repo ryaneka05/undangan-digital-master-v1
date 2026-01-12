@@ -1,6 +1,6 @@
 import { prisma } from "@/lib/prisma";
 
-export async function GET(request : Request, { params } : { params : { id: string } }) {
+export async function GET(request : Request, { params } : { params : Promise<{ id: string }> }) {
     try {
         const { searchParams  } = new URL(request.url);
         const invitationId  = searchParams.get("invitationId");
