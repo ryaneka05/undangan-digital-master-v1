@@ -56,19 +56,12 @@ const config: InvitationConfig = {
         ],
         audio: {
             src: "/audio/rossa-ft-afgan_kamu-yang-kutunggu.mp3", // or /audio/nature-sound.mp3
-            title: "Rossa ft Afgan - Kamu Yang Kutunggu", // or Nature Sound
+            title: "Rossa ft Afgan-Kamu Yang Kutunggu", // or Nature Sound
             autoplay: true,
             loop: true,
             toastDuration: 276000,
         },
-        banks: [
-            {
-                bank: "BRI",
-                accountNumber: "328601013575508",
-                accountName: "Rento nisya'ifibi Barkati",
-                waConfirm: "087721980039",
-            },
-        ],
+        banks: [],
         sendGifts: [
             {
                 recipientName: "Rento nisya'ifibi Barkati",
