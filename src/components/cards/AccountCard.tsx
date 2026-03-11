@@ -76,6 +76,8 @@ export default function AccountCard({ bankName, rekNo, accountName, waNo }: Card
             icName = "ic-bni.png"
         } else if (bankName == "Mandiri") {
             icName = "ic-mandiri.png"
+        } else if (bankName == "BSI") {
+            icName = "ic-BSI.png"
         }
         return icName;
     }
