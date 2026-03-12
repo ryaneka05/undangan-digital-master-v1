@@ -18,14 +18,14 @@ const config: InvitationConfig = {
         coupleImage: "/images/cover.png",
         groomImage: "/images/bride-image-animation-without-flower.png", //groom-image-animation-without-flower.png
         brideImage: "/images/groom-image-animation-without-flower.png", //bride-image-animation-without-flower.png
-        dateTime: "2026-03-25 09:00:00",
-        startDateTime: "2026-03-25 09:00",
+        dateTime: "2026-03-25 08:00:00",
+        startDateTime: "2026-03-25 08:00",
         endDateTime: "2026-03-25 17:30",
         date: "25 Maret 2026",
         maps_url: "-4.054197, 103.924805",
         maps_embed:
             "-4.054197, 103.924805",
-        time: "09:00 - 17:30 WIB",
+        time: "08:00 - 17:30 WIB",
         location: "Kediaman Mempelai Laki-Laki",
         address: "Desa suka merindu, Jln lintas Sumatra RT 03,semidang aji, ulu ogan KAB. Ogan komering ulu, Sumatra Selatan ( Rumah mempelai laki-laki )",
         ogImage: "/images/cover.png",
@@ -34,7 +34,7 @@ const config: InvitationConfig = {
             {
                 title: "Ngunduh Mantu",
                 date: "25 Maret 2026",
-                startTime: "09:00",
+                startTime: "08:00",
                 endTime: "Selesai",
                 location: "Kediaman Mempelai Laki-Laki",
                 address: "Desa suka merindu, Jln lintas Sumatra RT 03,semidang aji, ulu ogan KAB. Ogan komering ulu, Sumatra Selatan",
@@ -62,7 +62,7 @@ const config: InvitationConfig = {
             {
                 recipientName: "A/n Dandi Pratama Putra",
                 addressSendGifts: "Desa suka merindu, Jln lintas Sumatra RT 03,semidang aji, ulu ogan KAB. Ogan komering ulu, Sumatra Selatan",
-                waConfirmGifts: "081271729966", // Belum Fix
+                waConfirmGifts: "081271729966",
             }
         ]
     }
